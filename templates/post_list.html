@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Latest Posts{% endblock title %}
+
+{% block content %}
+{% for post in post_list %}
+<div class="card">
+  <div class="card-header">
+    <span class="fw-bold">
+      <a href="#">{{ post.title }}</a>
+    </span> &middot;
+    <span class="text-muted">by {{ post.author }} |
+      {{ post.date }}</span>
+  </div>
+  <div class="card-body">
+    {{ post.body }}
+  </div>
+  <div class="card-footer text-center text-muted">
+    <a href="#">Edit</a> <a href="#">Delete</a>
+  </div>
+</div>
+<br />
+{% endfor %}
+{% endblock content %}
