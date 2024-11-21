@@ -6,10 +6,15 @@ from django.urls import reverse
 
 # Create your models here.
 class CustomUser(AbstractUser):
-    age_limit = 13
     age = models.PositiveIntegerField(null=True, blank=True)
-    if not age_limit:
-        raise ValueError("You must be at least 13 year(s) old in order to create an account.")
+    first_name = models.CharField(max_length=40)
+    last_name = models.CharField(max_length=40)
+    email = models.EmailField(
+        verbose_name="email address",
+        unique=True,
+    )
+    username = models.CharField(max_length=40,unique=True)
+
         
 class Posts(models.Model):
     title = models.CharField(max_length=300)
@@ -27,16 +32,16 @@ class Posts(models.Model):
         return reverse("post_detail", kwargs={"pk": self.pk})
     
 
-#class CommentSection(models.Model):
-#    post = models.ForeignKey() # FINISH
-#    comments = models.CharField(max_length=140)
-#    author = models.ForeignKey(
-#        settings.AUTH_USER_MODEL,
-#        on_delete=models.CASCADE,
-#    )
+class CommentSection(models.Model):
+    post = models.ForeignKey(Posts, on_delete=models.CASCADE) # FINISH
+    comments = models.CharField(max_length=140)
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+    )
 
-#    def __str__(self):
-#        return self.comments
-#    
-#    def get_absolute_url(self):
-#        return reverse()""" # FINISH
+    def __str__(self):
+        return self.comments
+    
+    def get_absolute_url(self):
+        return reverse("post_list")

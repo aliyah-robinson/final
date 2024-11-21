@@ -23,6 +23,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("undertheradar/", include("undertheradar.urls")),
     path("undertheradar/", include("django.contrib.auth.urls")),
-    path("posts/", include("customization.urls")),
+    path("posts/", include("posts.urls")),
     path("", include("customization.urls")),
 ]

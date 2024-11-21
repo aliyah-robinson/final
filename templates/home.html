@@ -4,11 +4,14 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<p>Hi {{ user.username }}! You are {{user.age}} years old!</p> 
+<p>Hi {{ user.username }}! Welcome to your homepage!</p> 
 <form action="{% url 'logout' %}" method="post">
   {% csrf_token %}
   <button type="submit">Log Out</button>
 </form>
+<br/>
+<p><a class="btn btn-primary" href="{% url 'post_list' %}" role="button">
+  View all posts</a></p>
 {% else %}
 <p>You are not logged in</p>
 <a href="{% url 'login' %}">Log In</a> |
