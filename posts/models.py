@@ -4,7 +4,7 @@ from django.urls import reverse
 
 # Create your models here.
 class Post(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=300)
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
@@ -21,7 +21,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    comment = models.CharField(max_length=140)
+    comment = models.TextField()
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
