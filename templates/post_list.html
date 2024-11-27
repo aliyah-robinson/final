@@ -7,7 +7,7 @@
 <div class="card">
   <div class="card-header">
     <span class="fw-bold">
-      <a href="{{ posts.get_absolute_url }}">{{ post.title }}</a>
+      <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
     </span> &middot;
     <span class="text-muted">by {{ post.author }} |
       {{ post.date }}</span>
@@ -16,9 +16,9 @@
     {{ post.body }}
   </div>
   <div class="card-footer text-center text-muted">
-    {% if posts.author.pk == request.user.pk %} 
-    <a href="{% url 'edit_post' posts.pk %}">Edit</a>
-    <a href="{% url 'delete_post' posts.pk %}">Delete</a>
+    {% if post.author.pk == request.user.pk %}
+    <a href="{% url 'edit_post' post.pk %}">Edit</a>
+    <a href="{% url 'delete_post' post.pk %}">Delete</a>
     {% endif %}
   </div>
 </div>
