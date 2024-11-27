@@ -31,4 +31,4 @@ class Comment(models.Model):
         return self.comment
 
     def get_absolute_url(self):
-        return reverse("post_list")
+        return reverse("detail_post")
