@@ -20,8 +20,19 @@
     <a href="{% url 'edit_post' post.pk %}">Edit</a>
     <a href="{% url 'delete_post' post.pk %}">Delete</a>
     {% endif %}
+    <a href="{{ post.get_absolute_url }}">New Comment</a>
+  </div>
+  <div class="card-footer">
+    {% for comment in post.comment_set.all %}
+    <p>
+      <span class="fw-bold">
+        {{ comment.author }} &middot;
+      </span>
+      {{ comment }}
+    </p>
+    {% endfor %}
   </div>
 </div>
-<br />
+<br/>
 {% endfor %}
 {% endblock content %}
