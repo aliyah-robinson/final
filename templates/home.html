@@ -1,20 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock title %}
+{% block title %}Under The Radar{% endblock title %}
 
 {% block content %}
 {% if user.is_authenticated %}
 <p>Hi {{ user.username }}! Welcome to your homepage!</p> 
-<form action="{% url 'logout' %}" method="post">
-  {% csrf_token %}
-  <button type="submit">Log Out</button>
-</form>
+
 <br/>
 <p><a class="btn btn-primary" href="{% url 'post_list' %}" role="button">
-  View all posts</a></p>
+  Back to Dashboard</a></p>
 {% else %}
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">Log In</a> |
-<a href="{% url 'signup' %}">Sign Up</a>
+
+<h1 style="font-size: 60px; text-align: center; font-style:italic;"><span>Under The Radar</span></h1>
+<hr class="solid">
+<style>
+  hr.solid {
+    border-top: 6px solid #000;
+    opacity: 1;
+
+  }
+</style>
+<h2 class="right">Latest Discussions</h2>
+
+</style>
 {% endif %}
 {% endblock content %}
