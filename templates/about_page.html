@@ -3,3 +3,63 @@
 {% block title %}About{% endblock title %}
 
 {% block content %}
+<h1 style="font-size: 60px; text-align: center; font-style:italic;"><span>About</span></h1>
+<hr class="solid">
+<style>
+  hr.solid {
+    border-top: 6px solid #000;
+    opacity: 1;
+
+  }
+</style>
+<body>
+  <div class="card_1" style="background-color: rgb(254, 245, 233); ">
+    <div class="container_1" style="padding: 40px 60px; text-align:center; border-style: solid; font-style: italic;">
+      <h4>This is an interactive, user-friendly food blog where users can converse and comment on the hidden gems within the restaurant industry. Users can discuss the location, dining experience, quality, and even secret menu items of these establishments while other users can leave comments underneath each post</h4>
+    </div>
+  </div>
+  <br />
+  <br/>
+  <br />
+  <div style=" width:500px; height:100px; padding:50px; margin-left:35%">
+    <div class="container" style="padding: 6rem; border-style: solid;">
+    </div>
+  </div>
+  <div class="card_1" style="width: 400px;  height: 50px;  margin-left:30%; padding-bottom: 18%; position:relative; background-color: rgb(243, 194, 130);">
+    <div class="container" style="grid-gap: 40rem; padding: 6rem; border-style: solid;">
+      <h4>Meet the Owner!</h4>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <div class="card_2">
+    <div class="container_2" style="text-align: center; padding: 40px 60px; text-align:center; border-style: solid;"">
+      <h4>Charne Robinson</h4>
+      <hr class="solid">
+      <style>
+        hr.solid {
+          border-top: 1px solid #000;
+          opacity: 1;
+  
+        }
+      </style>
+      <p>Hi! My name is Charne Robinson and I am the founder and creator of Under the Radar. I hope you enjoy this project as much as I did!</p>
+      <h4>Contact Me!</h4>
+      <p>Email: crobinson12@my.waketech.edu</p>
+      <p>Date: December 4th, 2024</p>
+    </div>
+</body>
+<br />
+<hr class="solid">
+<style>
+  hr.solid {
+    border-top: 1px solid #000;
+    opacity: 1;
+
+  }
+</style>
+<footer style="text-align:center;background-color:rgb(243, 194, 130);">
+  <p>Back to <a href="{% url 'home' %}">Homepage</a>.</p>
+</footer>
+{% endblock content %}

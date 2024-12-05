@@ -3,6 +3,10 @@
 {% block title %}Posts{% endblock title %}
 
 {% block content %}
+
+
+<h1 style="font-size: 60px; text-align: center; font-style:italic;"><span> Your Dashboard</span></h1>
+
 {% for post in post_list %}
 <div class="card">
   <div class="card-header">
@@ -34,5 +38,11 @@
   </div>
 </div>
 <br/>
+
 {% endfor %}
+<footer style="text-align: center; background-color: #000;">
+  <a href="#top">Back to the Top</a>
+  <p style="color:white">&copy; 2024 Robinson</p>
+</footer>
+</body>
 {% endblock content %}

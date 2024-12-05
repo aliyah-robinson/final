@@ -3,25 +3,142 @@
 {% block title %}Under The Radar{% endblock title %}
 
 {% block content %}
-{% if user.is_authenticated %}
-<p>Hi {{ user.username }}! Welcome to your homepage!</p> 
-
-<br/>
-<p><a class="btn btn-primary" href="{% url 'post_list' %}" role="button">
-  Back to Dashboard</a></p>
-{% else %}
 
 <h1 style="font-size: 60px; text-align: center; font-style:italic;"><span>Under The Radar</span></h1>
-<hr class="solid">
+<h3 style="text-align: center;">Come Stay a While!</h3>
+<hr class="solid_1">
 <style>
-  hr.solid {
+  hr.solid_1 {
     border-top: 6px solid #000;
     opacity: 1;
 
   }
 </style>
-<h2 class="right">Latest Discussions</h2>
+<body>
+  <div style="text-align:center"><img src="https://t3.ftcdn.net/jpg/09/83/93/16/360_F_983931607_LrW7anEbJJnIenDF9kPotL7CvVQz4Xgm.jpg" style="width: 50vw; border:1vw solid black"></div>
+  <hr class="solid_2">
+  <style>
+    hr.solid_2 {
+      border-top: 2px solid #000;
+      opacity: 1;
 
-</style>
-{% endif %}
+    }
+  </style>
+  <br />
+  <h1 style="font-style:oblique">Latest Discussions</h1>
+  <br />
+  <br />
+  <!-- CARD STYLING-->
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgb(235, 230, 230);
+      transition: 0.3s;
+      width: 33%;
+      border-radius: 5px;
+      display:inline-block;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgb(219, 219, 219);
+    }
+    
+    img {
+      border-radius: 2px 2px 0 0;
+    }
+    
+    .container {
+      padding: 10px 16px;
+    }
+  </style>
+
+  <body>
+    <div class="card" style="text-align: center;">
+      <img src="https://pikwizard.com/pw/medium/c7d3f9954f9f81e8be92d5550bc611b3.jpg" style="width:100%">
+      <div class="container_1">
+        <h4>The kids loved it!</h4> 
+        <p>We never thought eating here would've kept us wanting more.</p> 
+      </div>
+
+    </div>
+    <div class="card" style="text-align: center;">
+      <img src="https://c8.alamy.com/comp/2PYK2H7/a-woman-dissatisfied-customer-of-the-thai-restaurant-sniffs-the-disgusting-smell-of-a-pineapple-rice-dish-with-spoiled-ingredients-and-is-going-to-com-2PYK2H7.jpg" style="width:92%">
+      <div class="container_2">
+        <h4>Don't Make My Mistake...</h4> 
+        <p>This was the absolutely worst experience, I could have ever had.</p> 
+      </div>
+    </div>
+    <div class="card" style="text-align: center;">
+      <img src="https://media.istockphoto.com/id/694509998/photo/dieting-habits-changes-woman-hates-vegetarian-diet.jpg?s=612x612&w=0&k=20&c=wBoMhMSZkXw9x-CzAH8FFnUUWJDBO3K-pYQv7k6KJiQ=" style="width:100% ; padding-bottom:3%">
+      <div class="container_3">
+        <h4>Is This Really a Salad?</h4> 
+        <p>I've had many salads in my time but this was just sad...</p> 
+      </div>
+    </div>
+
+    <div>
+      <br />
+    </div>
+
+    <div>
+      <br />
+    </div>
+
+    <div>
+      <br />
+    </div>
+
+    <h1 style="font-style:oblique">Featured Posts</h1>
+
+    <br/>
+
+    <div class="card" style="text-align: center;">
+      <img src="https://as1.ftcdn.net/v2/jpg/00/94/42/06/1000_F_94420660_Nw9DVWkjdHez6OkCOuwqXQXMSFkYTFVh.jpg" style="width:100%">
+      <div class="container_4" style="padding:7% 0 2% 0 ">
+        <h4>A Different Path</h4> 
+        <p>From soccer star to restauranter, one choice would change it all.</p> 
+      </div>
+    </div>
+    <div class="card" style="text-align: center;">
+      <img src="https://media.istockphoto.com/id/1141250445/photo/top-view-composition-of-various-asian-food-in-bowl.jpg?s=612x612&w=0&k=20&c=BwpfH94hv_H9UT0mKbmE9yu9Y1KL0lNJ0m4TyXTyC1Y=" style="width:100%;">
+      <div class="container_5" style="padding:0.3% 0 2.3% 0">
+        <h4> A Traveler's Guide to Chinese Cuisine</h4> 
+        <p>Ever wondered where come of the best Chinese restaurant's are and how to get started on some of the best dishes to try? Follow us for more as we explore some of the best in America!</p> 
+      </div>
+    </div>
+    <div class="card" style="text-align: center">
+      <img src="https://www.shutterstock.com/image-photo/happy-couple-taking-selfie-smart-600nw-2258498871.jpg" style="width:100%"">
+      <div class="container_6" style="width:100%; padding:0.3% 0 2.3% 0">
+        <h4>We Loved it here!</h4> 
+        <p>My wife and I love to travel and searching for a good place to eat is always a challenge; that was, until we found this place.</p> 
+      </div>
+    </div>
+    <div>
+      <br />
+    </div>
+    </body>
+    </html> 
+
+    <br />
+    <br />
+    <br />
+    <div>
+      <h2 style="text-align: center; width: 300px; height: 50px; border: 1px solid black; margin-left: 38%;"><a href="{% url 'about' %}">Contact Us!</a></h2>
+    </div>
+    <hr class="solid_3">
+    <style>
+      hr.solid_3 {
+        border-top: 2px solid #000;
+        opacity: 1
+
+      }
+    </style>
+
+
+    <footer style="text-align: center; background-color: rgb(243, 194, 130);">
+      <h3>Like what You See?  <a href="{% url 'signup' %}">Sign Up Here!</a></h3>
+      <a href="#top">Back to the Top</a>
+      <p style="color:white">&copy; 2024 Robinson</p>
+    </footer>
+  </body>
+
 {% endblock content %}
